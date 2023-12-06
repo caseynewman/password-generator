@@ -15,6 +15,20 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
+const generatePassword = () => {
+  //hasSpecial
+  //hasNumber
+  //hasUppercase
+  //hasLowercase
+
+  //prompt user for special
+  //if yes hasSpecial = true
+
+
+
+  //generate password
+
+}
 
 // click generate -> prompts for criteria
 // at least 8 characters, no more than 128
@@ -32,8 +46,8 @@ let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 console.log(numbers.length)
 
 // confirm include special characters
-let specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
-console.log(specialChar.length)
+let special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
+console.log(special.length)
 
 
 // store ^
