@@ -17,18 +17,6 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-let lowercase = ['abcdefghijklmnopqrstuvwxyz'];
-let uppercase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
-let numbers = ['0123456789'];
-let special = ['!@#$%^&*()+-./:;<=>?[]_`{|}~'];
-let multiSelect = [''];
-
-hasSpecNumUpperLower = 
-hasSpecNumUpper =
-hasSpecNumLower =
-hasSpec
-
-
 const generatePassword = () => {
   let password = ('');
 
@@ -39,6 +27,12 @@ let hasUpper = confirm("Click OK if you would like to include uppercase letters.
 let hasLower = confirm("Click OK if you would like to include lowercase letters.");
 let pwLength = prompt("How many characters would you like your password to be? It must be between 8 and 128.");
 
+
+let lowercase = "abcdefghijklmnopqrstuvwxyz";
+let uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let numbers = "0123456789";
+let special = "!@#$%^&*()+-./:;<=>?[]_`{|}~')";
+// let multiSelect = ('');
 
 
 if (pwLength < 8 || pwLength > 128) {
@@ -51,79 +45,61 @@ if (pwLength < 8 || pwLength > 128) {
 
 
 if(hasSpecial && hasNumber && hasUpper && hasLower) {
-  return (lower)
+   return ((special) + (numbers) + (uppercase) + (lowercase));
 }
 
-if(hasSpecial && hasNumber && hasUpper && !hasLower) {
-
-}
-
-if(hasSpecial && hasNumber && !hasUpper && hasLower) {
-
-}
-
-if(hasSpecial && !hasNumber && hasUpper && hasLower) {
-
-}
-
-if(!hasSpecial && hasNumber && hasUpper && hasLower) {
-
-}
-
-if(hasSpecial && hasNumber && !hasUpper && !hasLower) {
-
-}
-
-if(hasSpecial && !hasNumber && !hasUpper && !hasLower) {
-
-}
-
-if(!hasSpecial && !hasNumber && !hasUpper && hasLower) {
-
-}
-
-if(hasSpecial && !hasNumber && !hasUpper && hasLower) {
-
-}
-
-if(!hasSpecial && !hasNumber && hasUpper && hasLower) {
-
-}
-
-if(!hasSpecial && hasNumber && !hasUpper && hasLower) {
-
-}
-
-if(!hasSpecial && hasNumber && hasUpper && !hasLower)
-
-
-
-
-
-
-
-
-// for (let i = 0; i < numOfCharacters; i++) {
+// if(hasSpecial && hasNumber && hasUpper && !hasLower) {
 
 // }
 
-// if (hasSpecial === true)
+// if(hasSpecial && hasNumber && !hasUpper && hasLower) {
 
-// if (hasNumber === true)
+// }
 
-// if (hasUppercase === true)
+// if(hasSpecial && !hasNumber && hasUpper && hasLower) {
 
-// if (hasLowercase === true)
+// }
+
+// if(!hasSpecial && hasNumber && hasUpper && hasLower) {
+
+// }
+
+// if(hasSpecial && hasNumber && !hasUpper && !hasLower) {
+
+// }
+
+// if(hasSpecial && !hasNumber && !hasUpper && !hasLower) {
+
+// }
+
+// if(!hasSpecial && !hasNumber && !hasUpper && hasLower) {
+
+// }
+
+// if(hasSpecial && !hasNumber && !hasUpper && hasLower) {
+
+// }
+
+// if(!hasSpecial && !hasNumber && hasUpper && hasLower) {
+
+// }
+
+// if(!hasSpecial && hasNumber && !hasUpper && hasLower) {
+
+// }
+
+// if(!hasSpecial && hasNumber && hasUpper && !hasLower)
 
 
 
-  //hasSpecial
-  //hasNumber
-  //hasUppercase
-  //hasLowercase
 
-  //prompt user for special
-  //if yes hasSpecial = true
+// for (let i = 0; i < pwLength; i++) {
+
+// }
+
+
+
+
 
 
 
