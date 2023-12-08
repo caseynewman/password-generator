@@ -42,8 +42,17 @@ let pwLength = [''];
 
 
 for (let i = 0; i < numOfCharacters; i++) {
-  
+
 }
+
+if (hasSpecial === true)
+
+if (hasNumber === true)
+
+if (hasUppercase === true)
+
+if (hasLowercase === true)
+
 
 
   //hasSpecial
