@@ -46,17 +46,18 @@ if (numOfCharacters < 8 || numOfCharacters > 128) {
 
 
 
-for (let i = 0; i < numOfCharacters; i++) {
 
-}
+// for (let i = 0; i < numOfCharacters; i++) {
 
-if (hasSpecial === true)
+// }
 
-if (hasNumber === true)
+// if (hasSpecial === true)
 
-if (hasUppercase === true)
+// if (hasNumber === true)
 
-if (hasLowercase === true)
+// if (hasUppercase === true)
+
+// if (hasLowercase === true)
 
 
 
