@@ -41,7 +41,9 @@ let special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 let pwLength = [''];
 
 
-
+for (let i = 0; i < numOfCharacters; i++) {
+  
+}
 
 
   //hasSpecial
