@@ -17,14 +17,23 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
+let lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+let uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+let special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
+let pwLength = [''];
+
+
 const generatePassword = () => {
   let password = ('');
+
 
 let hasSpecial = confirm("Would you like to include special characters?");
 let hasNumber = confirm("Would you like to include numbers?");
 let hasUppercase = confirm("Would you like to include uppercase letters?");
 let hasLowercase = confirm("Would you like to include lowercase letters?");
 let numOfCharacters = prompt("How many characters would you like your password to be? It must be between 8 and 128.");
+
 
 if (numOfCharacters < 8 || numOfCharacters > 128) {
   alert("Your password must be between 8 and 128 characters in length.");
@@ -34,11 +43,7 @@ if (numOfCharacters < 8 || numOfCharacters > 128) {
   alert("Thank you! Your password will appear on the browser!");
 }
 
-let lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-let uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-let special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
-let pwLength = [''];
+
 
 
 for (let i = 0; i < numOfCharacters; i++) {
