@@ -18,7 +18,7 @@ generateBtn.addEventListener("click", writePassword);
 
 
 const generatePassword = () => {
-  let password = ('');
+  let finalPassword = ('');
 
 
 let hasSpecial = confirm("Click OK if you would like to include special characters.");
@@ -44,13 +44,16 @@ if (pwLength < 8 || pwLength > 128) {
 }
 
 
-if(hasSpecial && hasNumber && hasUpper && hasLower) {
-   return ((special) + (numbers) + (uppercase) + (lowercase));
+if (hasSpecial && hasNumber && hasUpper && hasLower) {
+  let charPool = (special + numbers + uppercase + lowercase);
+  return charPool[Math.floor(Math.random() * pwLength)]
+  
 }
 
-// if(hasSpecial && hasNumber && hasUpper && !hasLower) {
+if(hasSpecial && hasNumber && hasUpper && !hasLower) {
+  return (special + numbers + uppercase);
 
-// }
+}
 
 // if(hasSpecial && hasNumber && !hasUpper && hasLower) {
 
@@ -98,13 +101,6 @@ if(hasSpecial && hasNumber && hasUpper && hasLower) {
 // }
 
 
-
-
-
-
-
-  //generate password
-
 }
 
 // click generate -> prompts for criteria
@@ -112,6 +108,8 @@ if(hasSpecial && hasNumber && hasUpper && hasLower) {
 
 
 // let password = ['lowercase', 'uppercase', 'numbers', 'special'];
+
+charPool = ('');
 
 let min = 8;
 let max = 128;
