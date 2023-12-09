@@ -79,39 +79,76 @@ if(!hasSpecial && hasNumber && hasUpper && hasLower) {
 }
 
 if(hasSpecial && hasNumber && !hasUpper && !hasLower) {
-  let charPool = (special + numbers + lowercase);
+  let charPool = (special + numbers);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
+
+if(hasSpecial && !hasNumber && hasUpper && !hasLower) {
+  let charPool = (special + uppercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
+
+if(hasSpecial && !hasNumber && !hasUpper && hasLower) {
+  let charPool = (special + lowercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
+
+if(!hasSpecial && hasNumber && hasUpper && !hasLower) {
+  let charPool = (numbers + uppercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
+
+if(!hasSpecial && hasNumber && !hasUpper && hasLower) {
+  let charPool = (numbers + lowercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
+
+if(!hasSpecial && !hasNumber && hasUpper && hasLower) {
+  let charPool = (uppercase + lowercase);
   for (let i = 0; i < pwLength; i++) {
     finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
   }
 }
 
 if(hasSpecial && !hasNumber && !hasUpper && !hasLower) {
-  let charPool = (special + uppercase + lowercase);
+  let charPool = (special);
   for (let i = 0; i < pwLength; i++) {
     finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
   }
 }
 
-// if(!hasSpecial && !hasNumber && !hasUpper && hasLower) {
+if(!hasSpecial && hasNumber && !hasUpper && !hasLower) {
+  let charPool = (numbers);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
 
-// }
+if(!hasSpecial && !hasNumber && hasUpper && !hasLower) {
+  let charPool = (uppercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
 
-// if(hasSpecial && !hasNumber && !hasUpper && hasLower) {
-
-// }
-
-// if(!hasSpecial && !hasNumber && hasUpper && hasLower) {
-
-// }
-
-// if(!hasSpecial && hasNumber && !hasUpper && hasLower) {
-
-// }
-
-// if(!hasSpecial && hasNumber && hasUpper && !hasLower)
+if(!hasSpecial && !hasNumber && !hasUpper && hasLower) {
+  let charPool = (lowercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
 
 
 return finalPassword
-
 
 }
