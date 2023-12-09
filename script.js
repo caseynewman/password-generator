@@ -18,21 +18,20 @@ generateBtn.addEventListener("click", writePassword);
 
 
 const generatePassword = () => {
-  let finalPassword = ('');
+  let finalPassword = '';
 
 
 let hasSpecial = confirm("Click OK if you would like to include special characters.");
 let hasNumber = confirm("Click OK if you would like to include numbers.");
 let hasUpper = confirm("Click OK if you would like to include uppercase letters.");
 let hasLower = confirm("Click OK if you would like to include lowercase letters.");
-let pwLength = prompt("How many characters would you like your password to be? It must be between 8 and 128.");
+let pwLength = prompt("How many characters would you like your password to be? It must be between 8 and 128.") * 1;
 
 
-let lowercase = "abcdefghijklmnopqrstuvwxyz";
-let uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let numbers = "0123456789";
-let special = "!@#$%^&*()+-./:;<=>?[]_`{|}~')";
-// let multiSelect = ('');
+const lowercase = "abcdefghijklmnopqrstuvwxyz";
+const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "0123456789";
+const special = "!@#$%^&*()+-./:;<=>?[]_`{|}~')";
 
 
 if (pwLength < 8 || pwLength > 128) {
@@ -40,14 +39,19 @@ if (pwLength < 8 || pwLength > 128) {
 } else if (hasSpecial === false && hasNumber === false && hasUpper === false && hasLower === false) {
   alert("Your password must include at least one special character, number, uppercase letter, or lowercase letter.")
 } else {
-  alert("Thank you! Your password will appear on the browser!");
+  alert("Thank you! Your password is generating!");
 }
 
 
 if (hasSpecial && hasNumber && hasUpper && hasLower) {
   let charPool = (special + numbers + uppercase + lowercase);
-  return charPool[Math.floor(Math.random() * pwLength)]
-  
+
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+
+return finalPassword
+
 }
 
 if(hasSpecial && hasNumber && hasUpper && !hasLower) {
@@ -109,7 +113,7 @@ if(hasSpecial && hasNumber && hasUpper && !hasLower) {
 
 // let password = ['lowercase', 'uppercase', 'numbers', 'special'];
 
-charPool = ('');
+
 
 let min = 8;
 let max = 128;
@@ -123,3 +127,6 @@ let password = Math.floor(Math.random) * (max - min)
 
 // prompts are answered -> password generated to match criteria
 // password displayed in alert or written to page
+
+
+//'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
