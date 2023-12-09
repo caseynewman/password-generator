@@ -45,39 +45,52 @@ if (pwLength < 8 || pwLength > 128) {
 
 if (hasSpecial && hasNumber && hasUpper && hasLower) {
   let charPool = (special + numbers + uppercase + lowercase);
-
   for (let i = 0; i < pwLength; i++) {
     finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
   }
-
-return finalPassword
-
 }
 
 if(hasSpecial && hasNumber && hasUpper && !hasLower) {
-  return (special + numbers + uppercase);
-
+  let charPool = (special + numbers + uppercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
 }
 
-// if(hasSpecial && hasNumber && !hasUpper && hasLower) {
+if(hasSpecial && hasNumber && !hasUpper && hasLower) {
+  let charPool = (special + numbers + lowercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
 
-// }
+if(hasSpecial && !hasNumber && hasUpper && hasLower) {
+  let charPool = (special + uppercase + lowercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
 
-// if(hasSpecial && !hasNumber && hasUpper && hasLower) {
+if(!hasSpecial && hasNumber && hasUpper && hasLower) {
+  let charPool = (numbers + uppercase + lowercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
 
-// }
+if(hasSpecial && hasNumber && !hasUpper && !hasLower) {
+  let charPool = (special + numbers + lowercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
 
-// if(!hasSpecial && hasNumber && hasUpper && hasLower) {
-
-// }
-
-// if(hasSpecial && hasNumber && !hasUpper && !hasLower) {
-
-// }
-
-// if(hasSpecial && !hasNumber && !hasUpper && !hasLower) {
-
-// }
+if(hasSpecial && !hasNumber && !hasUpper && !hasLower) {
+  let charPool = (special + uppercase + lowercase);
+  for (let i = 0; i < pwLength; i++) {
+    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
+  }
+}
 
 // if(!hasSpecial && !hasNumber && !hasUpper && hasLower) {
 
@@ -98,35 +111,7 @@ if(hasSpecial && hasNumber && hasUpper && !hasLower) {
 // if(!hasSpecial && hasNumber && hasUpper && !hasLower)
 
 
-
-
-// for (let i = 0; i < pwLength; i++) {
-
-// }
+return finalPassword
 
 
 }
-
-// click generate -> prompts for criteria
-// at least 8 characters, no more than 128
-
-
-// let password = ['lowercase', 'uppercase', 'numbers', 'special'];
-
-
-
-let min = 8;
-let max = 128;
-
-let password = Math.floor(Math.random) * (max - min)
-
-
-
-// store ^
-// input should be validated and at least one character type should be selected
-
-// prompts are answered -> password generated to match criteria
-// password displayed in alert or written to page
-
-
-//'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
