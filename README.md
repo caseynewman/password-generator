@@ -2,6 +2,9 @@
 
 ## Description
 
+This project was created so that the user can generate a random password meeting their chosen criteria. The user can choose whether or not the randomly generated password can include lowercase letters, uppercase letters, numbers, and/or special characters, as well as the length of the password given it's within a certain range.
+
+
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
 - What was your motivation?
