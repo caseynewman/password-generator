@@ -45,111 +45,27 @@ if (pwLength < 8 || pwLength > 128) {
 }
 
 
-if (hasSpecial && hasNumber && hasUpper && hasLower) {
-  let charPool = (special + numbers + uppercase + lowercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
+let charPool = '';
+
+if(hasSpecial) {
+  charPool = special + charPool;
 }
 
-if(hasSpecial && hasNumber && hasUpper && !hasLower) {
-  let charPool = (special + numbers + uppercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
+if(hasNumber) {
+  charPool = numbers + charPool;
 }
 
-if(hasSpecial && hasNumber && !hasUpper && hasLower) {
-  let charPool = (special + numbers + lowercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
+if(hasUpper) {
+  charPool = uppercase + charPool;
 }
 
-if(hasSpecial && !hasNumber && hasUpper && hasLower) {
-  let charPool = (special + uppercase + lowercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
+if(hasLower) {
+  charPool = lowercase + charPool;
 }
 
-if(!hasSpecial && hasNumber && hasUpper && hasLower) {
-  let charPool = (numbers + uppercase + lowercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
+for (let i = 0; i < pwLength; i++) {
+  finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
 }
-
-if(hasSpecial && hasNumber && !hasUpper && !hasLower) {
-  let charPool = (special + numbers);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
-}
-
-if(hasSpecial && !hasNumber && hasUpper && !hasLower) {
-  let charPool = (special + uppercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
-}
-
-if(hasSpecial && !hasNumber && !hasUpper && hasLower) {
-  let charPool = (special + lowercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
-}
-
-if(!hasSpecial && hasNumber && hasUpper && !hasLower) {
-  let charPool = (numbers + uppercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
-}
-
-if(!hasSpecial && hasNumber && !hasUpper && hasLower) {
-  let charPool = (numbers + lowercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
-}
-
-if(!hasSpecial && !hasNumber && hasUpper && hasLower) {
-  let charPool = (uppercase + lowercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
-}
-
-if(hasSpecial && !hasNumber && !hasUpper && !hasLower) {
-  let charPool = (special);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
-}
-
-if(!hasSpecial && hasNumber && !hasUpper && !hasLower) {
-  let charPool = (numbers);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
-}
-
-if(!hasSpecial && !hasNumber && hasUpper && !hasLower) {
-  let charPool = (uppercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
-}
-
-if(!hasSpecial && !hasNumber && !hasUpper && hasLower) {
-  let charPool = (lowercase);
-  for (let i = 0; i < pwLength; i++) {
-    finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
-  }
-}
-
 
 return finalPassword
 
