@@ -67,6 +67,7 @@ for (let i = 0; i < pwLength; i++) {
   finalPassword += charPool.charAt(Math.floor(Math.random() * charPool.length))
 }
 
+
 return finalPassword
 
 }

@@ -13,3 +13,5 @@ As a user, click 'Generate Password' to begin. You'll be asked to click OK to co
 
 ## Credits
 
+- [Math.random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
+- I worked with a tutor, Alexis San Javier, to help consolidate the if statements I had written for each possible combination.
