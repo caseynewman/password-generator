@@ -36,12 +36,13 @@ const special = "!@#$%^&*()+-./:;<=>?[]_`{|}~')";
 
 if (pwLength < 8 || pwLength > 128) {
   alert("Your password must be between 8 and 128 characters in length.");
+  return finalPassword;
 } else if (hasSpecial === false && hasNumber === false && hasUpper === false && hasLower === false) {
-  alert("Your password must include at least one special character, number, uppercase letter, or lowercase letter.")
+  alert("Your password must include at least one special character, number, uppercase letter, or lowercase letter.");
+  return finalPassword;
 } else {
   alert("Thank you! Your password is generating!");
 }
-//fix return for wrong length
 
 
 if (hasSpecial && hasNumber && hasUpper && hasLower) {
