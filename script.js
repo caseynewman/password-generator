@@ -41,6 +41,7 @@ if (pwLength < 8 || pwLength > 128) {
 } else {
   alert("Thank you! Your password is generating!");
 }
+//fix return for wrong length
 
 
 if (hasSpecial && hasNumber && hasUpper && hasLower) {
