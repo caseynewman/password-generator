@@ -48,19 +48,19 @@ if (pwLength < 8 || pwLength > 128) {
 let charPool = '';
 
 if(hasSpecial) {
-  charPool = special + charPool;
+  charPool += special;
 }
 
 if(hasNumber) {
-  charPool = numbers + charPool;
+  charPool += numbers;
 }
 
 if(hasUpper) {
-  charPool = uppercase + charPool;
+  charPool += uppercase;
 }
 
 if(hasLower) {
-  charPool = lowercase + charPool;
+  charPool += lowercase;
 }
 
 for (let i = 0; i < pwLength; i++) {
